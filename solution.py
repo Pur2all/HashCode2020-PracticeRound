@@ -3,9 +3,11 @@ import time
 
 def solve(max_slices, different_type, pizzas_info):
     solution = (0, 0)
+    pizza_with_max_slices_value = max(pizzas_info.values())
+    combination_lower_bound = max_slices // pizza_with_max_slices_value
     pizzas_list = list(pizzas_info.keys())
 
-    for i in range(len(pizzas_list)-1, -1, -1):
+    for i in range(len(pizzas_list)-1, combination_lower_bound, -1):
         current_sum = 0
         current_solution_list = []
 
