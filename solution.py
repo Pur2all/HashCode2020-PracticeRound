@@ -49,4 +49,4 @@ for input_file in input_files:
     process(input_file)
     print(f"{input_file} processed in {time.time() - start_time} seconds")
 
-print(f"All files processed in {time.time() - start_time} seconds")
+print(f"All files processed in {time.time() - init_time} seconds")
